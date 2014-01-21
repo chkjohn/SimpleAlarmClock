@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <DigitalClock
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30"
+        android:gravity="center"
+        android:textSize="40sp" />
+    
+    <View
+        android:id="@+id/title_border_top"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_margin="0dp"
+        android:background="@color/holo_blue_light"
+        android:padding="0dp" />
+
+    <TextView
+        android:id="@+id/nextAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30"
+        android:gravity="center"
+        android:textSize="20sp" />
+    
+    <View
+        android:id="@+id/title_border_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_margin="0dp"
+        android:background="@color/holo_blue_light"
+        android:padding="0dp" />
+    
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:longClickable="true" >
+    </ListView>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:padding="10dp"
+        android:text="@string/no_alarms" />
+
+    
+    <View
+        android:id="@+id/title_border_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_margin="0dp"
+        android:background="@color/holo_blue_light"
+        android:padding="0dp" />
+    
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/button_new"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/button_new"
+            android:src="@android:drawable/ic_menu_add" />
+
+        <TextView
+            android:id="@+id/textView_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/button_new"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/primary_text_dark" />
+
+    </LinearLayout>
+
+</LinearLayout>
